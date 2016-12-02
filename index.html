@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="NewsSwipe" content="NewsSwipe, swipe the news ! ">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>NewsSwipe</title>
+
+		<link rel=stylesheet href="css/main.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="js/app.js"></script>
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+	</head>
+
+<body ng-app="app" ng-controller="contactCtrl">
+
+<div class="level level-hero hero-home has-hint">
+    <div class="hero-overlay visible-lg"></div>
+
+    <video loop id=bg-video class=fullscreen-video autoplay>
+        <source src="http://alvarez.is/bt/appi.webm" type="video/webm">
+        <source src="http://alvarez.is/bt/appi.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="container full-height">
+        <div class=v-align-parent>
+
+            <div class=v-center>
+                <img src="img/logo.png"/>
+                <div class="row">
+                    <div class="col-xs-10 col-sm-6">
+                        <h1 class="mb-10 heading">Read <span>better news</span></h1>
+                        <div class="subheading mb-20">NewsSwipe regroupe des centaines de journaux afin de vous suggérer des articles selon vos goûts et ceci <span class="bold">gratuitement.</span></div>
+                    </div>
+                </div>
+                <div>
+
+                    <div class="black-background">
+                        <h1 class="white">03/2016 : <i class="fa fa-apple "></i> <i class="fa fa-android "></i>  <i class="fa fa-windows "></i> </h1>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class=hint-arrow></div>
+    </div>
+</div>
+
+
+
+
+<div class="level level-img-right">
+
+    <div class="container xs-mb-30">
+        <img class=img-right-sprite src="img/v2/iphone-bg-lg.min.png" alt>
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-6 col-lg-offset-1 col-lg-5">
+                <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Articles</h1>
+                <h2 class="w-300 color-dark mb-10">Une application pour les regrouper tous</h2>
+                <p class=xs-mw>NewsSwipe regroupe des centaines de journaux afin de vous suggérer des articles selon vos goûts et ceci gratuitement.
+            </div>
+        </div>
+
+        <div class="visible-xs xs-mw xs-mb-40">
+            <img src="img/v2/iphone-mobile.min.png" alt>
+        </div>
+
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-1 col-lg-offset-1">
+                <span class="icon vertical-align"><i class="fa fa-globe fa-2x"></i></span>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <h3 class="mb-15">Tous les journaux du monde</h3>
+                <p class="smaller xs-mw">NewsSwipe regroupe des milliers de journaux et d’articles du monde entier.
+            </div>
+        </div>
+
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-1 col-lg-offset-1">
+                <span class="icon vertical-align"><i class="fa fa-rocket fa-2x"></i></span>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <h3 class="mb-15">Accéder rapidement à l’information</h3>
+                <p class="smaller xs-mw">Vous ne voulez pas lire l’article affiché ? Swipez le à droite et nous vous en proposons un autre.
+            </div>
+        </div>
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-1 col-lg-offset-1">
+                <span class="icon vertical-align"><i class="fa fa-eye fa-2x"></i></span>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <h3 class="mb-15">Un confort de lecture inégalé</h3>
+                <p class="smaller xs-mw">Nous adaptons les articles à votre écran pour un confort de lecture optimal.
+            </div>
+        </div>
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-1 col-lg-offset-1">
+                <span class="icon vertical-align"><i class="fa fa-share-alt-square fa-2x"></i></span>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <h3 class="mb-15">Partagez les articles avec le monde entier</h3>
+                <p class="smaller xs-mw">Grâce au bouton share, vous pouvez partager les articles qui vous intéressent sur les réseaux sociaux.
+            </div>
+        </div>
+        <div class="row mb-60 xs-mb-20">
+            <div class="col-sm-1 col-lg-offset-1">
+                <span class="icon vertical-align"><i class="fa fa-level-up fa-2x"></i></span>
+            </div>
+            <div class="col-sm-4 col-md-3">
+                <h3 class="mb-15">Créee et améliorée pour vous</h3>
+                <p class="smaller xs-mw">Nous améliorons et optimisons constamment notre application pour s’adapter à vos besoins.
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-----------------------------------------------------------------------------------------------------------------------------------
+                                                                   COUNTER
+      ---------------------------------------------------------------------------------------------------------------------------------->
+<div class="level background-blue white">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="facts text-center">
+                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                        <div class="facts-wrap">
+                            <i class="fa fa-user fa-3x"></i>
+                            <p><br></p>
+                            <div class="fact-content">
+                                <h4 class="white padding-bottom-15">Utilisateurs</h4>
+                                <div class="line"></div>
+                                <p><br></p>
+                                <div class="facts-wrap-num">
+
+                                    <h3 class=" bold counter ">___</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                        <div class="facts-wrap">
+                            <i class="fa fa-newspaper-o fa-3x"></i>
+                            <p><br></p>
+                            <div class="fact-content">
+                                <h4 class="white padding-bottom-15">Journaux</h4>
+                                <div class="line"></div>
+                                <p><br></p>
+                                <h3 class="bold facts-wrap-num"><span class="counter"> ___</span></h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                        <div class="facts-wrap">
+                            <i class="fa fa-paper-plane-o fa-3x"></i>
+                            <p><br></p>
+                            <div class="fact-content">
+                                <h4 class="white padding-bottom-15">Articles affichés</h4>
+                                <div class="line"></div>
+                                <p><br></p>
+                                <h3 class="bold facts-wrap-num"><span class="counter">___</span></h2>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-12 col-sm-6 columns">
+                        <div class="facts-wrap">
+                            <i class="fa fa-binoculars fa-3x"></i>
+                            <p><br></p>
+                            <div class="fact-content">
+                                <h4 class="white padding-bottom-15">Articles lus</h4>
+                                <div class="line"></div>
+                                <p><br></p>
+                                <h3 class="bold facts-wrap-num"><span class="counter">___</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-----------------------------------------------------------------------------------------------------------------------------------
+                                                                DOWNLOADS
+      ---------------------------------------------------------------------------------------------------------------------------------->
+<section class="level">
+    <div class="container">
+        <div class="row">
+            <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Télécharger l'application</h1>
+            <div class="col-lg-8">
+                <h1><a href="#"><i class="fa fa-apple"></i></a> <a href="#"><i class="fa fa-android"></i></a>  <a href="#"><i class="fa fa-windows"></i></a></h1>
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Clients start -->
+<section id="clients" class="clients landing_page_clients">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12 col-xs-12">
+
+                <div id="client-carousel" class=" owl-carousel owl-theme text-center client-carousel">
+                    <div class="col-lg-4">
+                        <figure class="item client_logo">
+                            <a href="http://www.enseignementsup-recherche.gouv.fr/cid79223/pepite-poles-etudiants-pour-innovation-transfert-entrepreneuriat.html">
+                                <img src="img/clients/client1.png" alt="client">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-lg-5">
+                        <figure class="item client_logo">
+                            <a href="https://www.beelys.camp/">
+                                <img src="img/clients/client2.png" alt="client">
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3">
+                        <figure class="item client_logo">
+                            <a href="http://www.univ-lyon3.fr/fr/vie-du-campus/vie-associative/associations-lyon-3/lyon-3-entrepreneurs-570459.kjsp?RH=1248798407350">
+                                <img src="img/clients/client3.png" alt="client">
+                            </a>
+                        </figure>
+                    </div>
+
+
+
+                </div><!-- Owl carousel end -->
+            </div><!-- col-md-12 end -->
+        </div><!-- Content row end -->
+    </div><!--/ Container end -->
+</section><!--/ Clients end -->
+
+<!-----------------------------------------------------------------------------------------------------------------------------------
+                                                                 TESTIMONIALS
+    --------------------------------------------------------------------------------------------------------------------------------
+<section class="level container">
+    <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Nos utilisateurs nous <i class="fa fa-heart-o"></i></h1>
+    <div class="row">
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><br></p>
+    <div class="row">
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 padding-10">
+            <div class="item centered">
+                <span class="centered"><img alt="" src="http://lorempixel.com/100/100" class="img-circle img-responsive"/></span>
+                <div class="testimonials col-md-10">
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. - <small>Yayo Dudemous</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>-->
+
+
+<div class="level container" id="contact">
+    <h1 class="mb-20 xs-mb-10 heading color-dark heading-bordered xl-heading-outdent">Contactez-nous</h1>
+    <p class=xs-mw>Nous sommes ravis d'avoir des retours de votre part</p>
+    <p><br></p>
+
+             <form ng-submit="processForm()" ng-hide="success">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="contact-inner">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group" ng-class="{ 'has-error' : errorLastName }">
+                                        <input type="text" class="form-control" placeholder="Nom" required ng-model="formData.LastName" minlength="2" maxlength="20">
+                                        <span class="help-block" ng-show="errorLastName">{{ errorLastName }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group" ng-class="{ 'has-error' : errorFirstName }">
+                                        <input type="text" class="form-control" placeholder="Prénom" required ng-model="formData.FirstName" minlength="2" maxlength="20" required>
+                                        <span class="help-block" ng-show="errorFirstName">{{ errorFirstName }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+
+                                        <input type="email" class="form-control" placeholder="Votre email" ng-model="formData.Email" required ng-class="{ 'has-error' : errorEmail1 || errorEmail2 }">
+                                        <span ng-show="errorEmail1" class="help-block">{{ errorEmail1 }} </span>
+                                        <span ng-show="errorEmail2" class="help-block">{{ errorEmail2 }}</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <textarea name="" id="" cols="30" rows="8" class="form-control" placeholder="Message"  ng-class="{ 'has-error' : errorMessage }" minlength="20" maxlength="1500" ng-model="formData.MessageUser" required></textarea>
+                                    <span ng-show="errorEmail1" class="help-block">{{ errorMessage }} </span>
+                                </div>
+                            </div>
+                    </div> <!-- row end -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <button class="btn-perso">Envoyer le message</button>
+
+
+
+
+                        </div>
+
+
+</div>
+</div>
+      </form>
+    <div class="alert alert-danger" ng-show="messageError">
+        {{ messageError }}
+    </div>
+    <div id="messages" class="alert alert-success" ng-show="message">
+        {{ message }}
+    </div>
+        </div>
+
+<div class="container-fluid no">
+<div class="footer text-center">
+        <h2 class="white">Rejoignez nous sur : </h2>
+        <p><br></p>
+        <div class="row">
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-2">
+                <a href="#"><i class="fa fa-facebook fa-4x"></i></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="#"><i class="fa fa-twitter fa-4x"></i></a>
+            </div>
+            <div class="col-lg-2">
+                <a href="#"><i class="fa fa-linkedin fa-4x"></i></a>
+            </div>
+        </div>
+        <p><br></p>
+</div>
+</div>
+<!-----------------------------------------------------------------------------------------------------------------------------------
+                                                            FOOTER
+   ---------------------------------------------------------------------------------------------------------------------------------->
+<section class="footer-normal padding-10 no">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li>Entreprise<li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Qui sommes nous</a></li>
+                    <li><a href="#contact">Contactez-nous</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li>Application<li>
+                    <li><a href="not-yet.html">iOS</a></li>
+                    <li><a href="not-yet.html">Android</a></li>
+                    <li><a href="not-yet.html">Windows</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li>Communauté<li>
+                    <li><a href="#"><i class="fa fa-facebook-official fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled">
+                    <li>Publicité<li>
+                    <li><a href="press.html">Presse</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-8">
+                <ul class="list-unstyled list-inline pull-left">
+                    <li><a href="terms-of-use.html">Conditions d'utilisations</a></li>
+                    <li><a href="privacy-policy.html">Protection vie privée</a></li>
+                    <li><a href="copyright.html">Copyright</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <p class="text-muted pull-right">© 2015 NewsSwipe. All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+	
+
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/main.js"></script>
+	<!-- //-end- concat_js -->
+
+
+
+</html>
